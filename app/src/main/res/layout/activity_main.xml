@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="net.zyc.ss.udptransapp.MainActivity">
+
+    <RadioGroup
+        android:id="@+id/rb_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/rb_startClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="客户端" />
+
+        <RadioButton
+            android:id="@+id/rb_startServer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="服务器"
+            tools:layout_editor_absoluteX="294dp"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_server_ip"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="输入ip"
+            android:inputType="textUri" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:text=":"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_port"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:hint="输入端口号"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btn_port_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_send_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="发送内容"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btn_send_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="循环发送" />
+
+        <EditText
+            android:id="@+id/et_sleep_time"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:hint="间隔时间ms"
+            android:inputType="number" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/txt_receive"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@android:color/holo_blue_bright" />
+</LinearLayout>
