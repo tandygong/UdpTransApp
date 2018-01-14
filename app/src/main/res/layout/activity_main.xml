@@ -13,7 +13,6 @@
         android:orientation="horizontal">
 
         <RadioButton
-            android:checked="true"
             android:id="@+id/rb_startClient"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,8 +42,9 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:text=":"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:text=":" />
+
         <EditText
             android:id="@+id/et_port"
             android:layout_width="100dp"
@@ -69,8 +69,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:hint="发送内容"
-            android:inputType="number" />
+            android:hint="发送内容" />
 
         <Button
             android:id="@+id/btn_send_data"
@@ -104,5 +103,7 @@
         android:id="@+id/txt_receive"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@android:color/holo_blue_bright" />
+        android:background="@android:color/holo_blue_bright"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp" />
 </LinearLayout>
